@@ -1,24 +1,25 @@
 double seconds_difference(double time_1, double time_2)
 {
-    // your implementation goes here...
+    return time_1-time_2;
+}
     
     /*    
         Return the number of seconds later that a time in seconds
-        time_2 is than a time in seconds time_1.
-            
-        >>> seconds_difference(1800.0, 3600.0)
-        1800.0
+        time_2 is than a time in seconds time_1.*/
 
-        >>> seconds_difference(3600.0, 1800.0)
-        -1800.0
+        double eps=DBL_EPSILON;
+            
+        cout >> seconds_difference(1800.0, 3600.0)
+        assert(fabs(seconds_difference(1800.0, 3600.0),1800.0)<eps);
+
+        cout >> seconds_difference(3600.0, 1800.0)
+        assert(fabs(seconds_difference(3600.0, 1800.0),-1800.0)<eps);
 
         >>> seconds_difference(1800.0, 2160.0)
-        360.0
+        assert(fabs(seconds_difference(1800.0, 2160.0),360.0)<eps);
 
         >>> seconds_difference(1800.0, 1800.0)
-        0.0
-    */
-}
+        assert(fabs(seconds_difference(1800.0, 1800.0),0.0)<eps);
 
 double hours_difference(double time_1, double time_2)
 {
